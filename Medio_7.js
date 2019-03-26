@@ -4,7 +4,6 @@ function transposta() {
     let matriz = [];
     let matriz2 = [];
     let n = 1;
-    let n2 = 1;
     for (let i = 0; i < 5; i++) {
         matriz[i] = [];
         for (let j = 0; j < 5; j++) {
