@@ -1,0 +1,47 @@
+<!---/*
+ *  8) Monte um algoritmo que leia as vendas de cada vendedor durante uma semana,
+ *  armazenando-as em uma matriz 3x5. Ao final informe:
+ *  a) Faturamento diário da empresa;
+ *  b) faturamento semanal da empresa;
+ *  c) faturamento semanal por vendedor
+ *  d) Informar qual o vendedor de maior faturamento semanal
+*/ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Medio 8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function NaoFazSentido(){
+        let vendedor = new Object();
+        let matriz = [];
+        let FaturamentoDiario = 0;
+        let FaturamentoSemanal = 0;
+        let vendedores = [];
+        for (let i = 0; i < 3; i++) {
+            matriz[i] = [];
+            for (let j = 0; j < 5; j++) {
+                vendedor.nome = prompt("Digite o nome do vendedor");
+                vendedor.venda = prompt("Digite o valor da venda");
+                matriz[i][j] = vendedor;
+                FaturamentoSemanal = matriz[i][j].venda;
+                let nomeVendedor = vendedor.nome;
+                vendedores.push(matriz[i].filter( function (nomeVendedor, j){
+                    return nomeVendedor;
+                }));
+            }
+        }
+
+
+        console.log(matriz);
+    }
+    </script>
+</head>
+<body onload="NaoFazSentido()">
+    
+</body>
+</html>
+
