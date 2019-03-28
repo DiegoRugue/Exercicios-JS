@@ -1,0 +1,49 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Goldbach</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        /*
+         * 12)	A famosa conjectura de Goldbach diz que todo inteiro par maior que 2
+         * é a soma de dois números primos (você aceita isso?). Testes foram feitos sem, 
+         * contudo, encontrar um contra-exemplo. Escreva um programa mostrando que a armação 
+         * é verdadeira para todo número par entre 700 e 1100. O programa deve imprimir cada 
+         * número e seus correspondentes primos.
+         * OBS: NÃO FUNCIONA NO NODE ;(
+         * 
+        */
+        function primo(n) {
+            if ((n % 2 != 0 && n % 3 != 0 && n % 5 != 0 && n != 1 && n != 2 && n != 7) || n == 3) {
+                return n;
+            }
+            return 0;
+        }
+
+        function goldbach() {
+            for (let i = 700; i < 1100; i++) {
+                for (let j = 0; j < i / 2 + 1; j++) {
+                    if (i % 2 == 0) {
+                        if (primo(j)) {
+                            result = i - primo(j);
+                            let gg = primo(result);
+                            if (gg != 0) {
+                                console.log(`${j} + ${result} = ${i}`);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body onload="goldbach()">
+
+</body>
+
+</html>
